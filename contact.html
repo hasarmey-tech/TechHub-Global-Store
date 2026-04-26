@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function isnotnum(str) {
+            for (var i = 0; i < str.length; i++) {
+                if (!isNaN(str[i]) ) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function con(form) {
+            var passed = false;
+            
+            if (form.firstName.value.length <= 2) {
+                alert('Invalid input. Please try again');
+            }
+            else if (!isnotnum(form.firstName.value)) {
+                alert('Invalid input. Please try again');
+            }
+            else if (form.lastName.value.length <= 2) {
+                alert('Invalid input. Please try again');
+            }
+            else if (!isnotnum(form.lastName.value)) {
+                alert('Invalid input. Please try again');
+            }
+            else if (form.email.value.indexOf('@') == -1) {
+                alert('Invalid input. Please try again');
+            }
+            else if (form.email.value.indexOf('.') == -1) {
+                alert('Invalid input. Please try again');
+            }
+            else if (form.phone.value.length != 10) {
+                alert('Invalid input. Please try again');
+            }
+            else if (isNaN(form.phone.value)) {
+                alert('Invalid input. Please try again');
+            }
+            else {
+                passed = true;
+            }
+            return passed;
+        }
+    </script>
+</head>
+<body id="top">
+    <div class="container">
+        <main class="main-a">
+            <section>
+                <h1 class="page-title">Contact Us</h1>
+                
+                <form name="tofes" class="contact-form" action="contact1.html" method="get" onsubmit="return con(tofes);">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td><input type="text" id="firstName" name="firstName" placeholder="First Name" required style="width: 100%; padding: 12px; border: 3px solid steelblue; border-radius: 4px; font-size: 16px; font-family: Arial, sans-serif;  height: 20px; width:550px;"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="lastName" name="lastName" placeholder="Last Name" required style="width: 100%; padding: 12px; border: 3px solid steelblue; border-radius: 4px; font-size: 16px; font-family: Arial, sans-serif;   height: 20px; width:550px;"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="email" name="email" placeholder="Email" required style="width: 100%; padding: 12px; border: 3px solid steelblue; border-radius: 4px; font-size: 16px; font-family: Arial, sans-serif;   height: 20px; width:550px;"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="phone" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 12px; border: 3px solid steelblue; border-radius: 4px; font-size: 16px; font-family: Arial, sans-serif;   height: 20px; width:550px;"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="continent" name="continent" style="width: 100%; padding: 12px; border: 3px solid steelblue; border-radius: 4px; font-size: 16px; font-family: Arial, sans-serif;   ">
+                                    <option value="Select Continent">Select Continent</option>
+                                    <option value="africa">Africa</option>
+                                    <option value="asia">Asia</option>
+                                    <option value="europe">Europe</option>
+                                    <option value="north-america">North America</option>
+                                    <option value="oceania">Oceania</option>
+                                    <option value="south-america">South America</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><textarea class="problem" name="problem" placeholder="Problem Description"  required style="width: 100%; padding: 12px; border: 3px solid steelblue; border-radius: 4px; font-size: 16px; font-family: Arial, sans-serif; height: 120px; width:500px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right; padding-top: 16px;">
+                                <input type="submit" class="submit-a" value="Submit">
+                                <input type="reset" class="reset-a" value="Reset" style="margin-left: 16px;">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+        </main>
+    </div>
+    <a href="#top" class="back-up">↑</a>
+</body>
+</html>
+
+
+

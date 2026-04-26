@@ -1,0 +1,357 @@
+
+
+
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.main-photos {
+    position: relative;
+    width: 100%;
+    margin:-29px -20px 20px -20px;
+    height: 500px;
+    
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    color: white;
+    background-color: navy;
+    width: 100%;
+    border-radius: 8px;
+    animation: wemove 5s forwards;
+}
+
+@keyframes wemove {
+    0% {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+      
+        opacity: 1;
+    }
+    80% {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+        
+        opacity: 1;
+    }
+    85% {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+       
+        opacity: 0;
+    }
+    86% {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: scale(1);
+       
+        opacity: 0;
+    }
+    100% {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: scale(1);
+        
+        opacity: 1;
+    }
+}
+
+.main section {
+    width: 100%;
+    padding: 8px;
+    overflow-x: hidden;
+    
+}
+
+.iframe-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#contentFrame {
+    width: 65%;
+    height: 450px;
+    border: 2px solid steelblue;
+    margin: 0;
+    border-radius: 4px;
+}
+
+
+.iframe-v {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    background-color: white;
+    width: 35%;
+    
+}
+
+.iframe-v a {
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid steelblue;
+    background-color: navy;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.iframe-v a:hover {
+    background-color: royalblue;
+    border-color: royalblue;
+    transform: translateY(-2px);
+}
+
+.brand-pic {
+    background-color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.brand-pic-a {
+    display: flex;
+    align-items: center;
+    animation: move 60s infinite;
+    width: fit-content;
+}
+
+.brand-pic:hover .brand-pic-a {
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.scroll-photo {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    
+}
+
+.scroll-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+
+.back-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: navy;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid steelblue;
+    cursor: pointer;
+}
+
+.back-up:hover {
+    background-color: royalblue;
+    border-color: royalblue;
+    transform: translateY(5px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-title {
+    text-align: center;
+    color: navy;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.main-a {
+    padding: 8px;
+    background-color: white;
+    flex: 1;
+}
+
+.products-row {
+    margin-bottom: 20px;
+}
+
+.brand-name {
+    font-weight: bold ; 
+    font-size: 24px; 
+    font-family:  Arial, sans-serif;
+    color: white;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: crimson;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.products-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 8px ;
+}
+
+.product-card {
+    padding: 12px;
+    border: 2px solid steelblue;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: navy;
+}
+
+.product-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;    
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.product-name, .product-price {
+    font-family: Arial, sans-serif;
+    color: black;
+    font-weight: bold ;
+    text-align: center;
+}
+
+.product-name {
+    margin-bottom: 6px;
+}
+
+.product-price {
+    margin-bottom: 12px;
+}
+
+.product-buy {
+    padding: 8px;
+    background-color: white;
+    color: black;
+    border: 2px solid steelblue;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+   
+}
+
+.product-buy:hover {
+    background-color: navy;
+    color: white;
+}
+
+.contact-form, .purchase-form {
+    width: 50%;
+    margin: 10px auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 8px;
+    
+}
+
+.submit-a {
+    background-color: navy;
+    color: white;
+    border: 2px solid navy;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.submit-a:hover {
+    background-color: royalblue;
+    border-color: royalblue;
+    transform: translateY(-2px);
+}
+
+.reset-a {
+    background-color: white;
+    color: darkslategray;
+    border: 2px solid steelblue;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.reset-a:hover {
+    background-color: gainsboro;
+    
+}
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    background-color: white;
+    border: 6px solid steelblue;
+}
+
+th {
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid steelblue;
+    padding: 15px;
+}
+
+td {
+    border: 1px solid gainsboro;
+    padding: 10px;
+    text-align: center;
+    color: darkslategray;
+}
+.company-title td,
+.table-title td {
+    background-color: navy;
+    color: white;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid steelblue;
+    text-align: center;
+}

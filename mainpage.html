@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>STARMARKET</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function menu1() {
+            var x = document.getElementById('productpages');
+            if (x.style.display === 'flex') {
+                x.style.display = 'none';
+            } else {
+               x.style.display = 'flex';
+            }
+        }
+        
+    </script>
+    <style>
+        @media (max-width: 540px) {
+            .container .content-body {
+                flex-direction: column;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+        }
+
+        header {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+            background-color: navy;
+            border-bottom: 2px solid steelblue;
+        }
+        footer {
+            flex: 0 0 auto;
+            padding: 8px;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            border-top: 2px solid steelblue;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 29px;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-a {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-a a {
+            padding: 8px 16px;
+            border: 2px solid steelblue;
+            border-radius: 4px;
+            background-color: navy;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header-a a:hover {
+            background-color: white;
+            color: navy;
+            border-color: white;
+        }
+
+        .menu-c {
+            width: 40px;
+            height: 40px;
+            background-color: navy;
+            border: 2px solid steelblue;
+            border-radius: 4px;
+            padding: 0;
+            font-size: 24px;
+            color: white;
+        }
+
+        .menu-c:hover {
+            background-color: white;
+            color: navy;
+            border-color: white;
+        }
+
+        .product-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: navy;
+            flex-direction: column;
+        }
+        .product-menu a {
+            padding: 12px 16px;
+            border-bottom: 1px solid steelblue;
+            text-decoration: none;
+            color: white;
+        }
+
+        .product-menu a:hover {
+            background-color: white;
+            color: navy;
+        }
+
+        .content-body {
+            display: flex;
+            flex: 1;
+        }
+
+        .content-body .content {
+            flex: 1;
+            overflow: auto;
+        }
+
+        .mainpage-iframe-a {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body id="top">
+    <div class="container">
+        <header>
+            <a href="home.html" class="logo" target="mainpage-iframe">STARMARKET</a>
+            <div class="header-a">
+                <a href="home.html" target="mainpage-iframe">Home</a>
+                <a href="details.html" target="mainpage-iframe">Details</a>
+                <a href="contact.html" target="mainpage-iframe">Contact</a>
+                <button class="menu-c" onclick="menu1()">☰</button>
+                <nav class="product-menu" id="productpages">
+                    <a href="labtop.html" target="mainpage-iframe">Laptop</a>
+                    <a href="pc.html" target="mainpage-iframe">PC</a>
+                    <a href="phone.html" target="mainpage-iframe">Phone</a>
+                    <a href="headphone.html" target="mainpage-iframe">Headphones and Airbuds</a>
+                    <a href="consols.html" target="mainpage-iframe">Consoles</a>
+                    <a href="tablet.html" target="mainpage-iframe">Tablet</a>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="content-body">
+            <iframe src="home.html" class="content mainpage-iframe-a" name="mainpage-iframe"></iframe>
+        </div>
+        
+        <footer>
+            <p> 2026 STARMARKET All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

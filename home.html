@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>STARMARKET - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var i = 0;
+        var pics = new Array();
+        
+        pics[0] = "pic.200.jpg";
+        pics[1] = "pic.201.webp";
+        pics[2] = "pic.202.webp";
+        pics[3] = "pic.203.webp";
+        pics[4] = "pic.204.jpg";
+        pics[5] = "pic.205.webp";
+        pics[6] = "pic.206.webp";
+        
+        function swapImage() {
+            document.images.slide.src = pics[i];
+            if (i < pics.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout("swapImage()", 6000);
+        }
+    </script>
+</head>
+<body id="top" onload="swapImage()">
+    <div>
+        <main class="main">
+            <div class="main-photos" style="display: flex; justify-content: center; align-items: center;">
+                <img name="slide" width="100%" height="500" />
+            </div>
+            <div class="welcome-message">Welcome to STARMARKET</div>
+            <section>
+                <h2 style="text-align: left; margin-top: 10px; margin-bottom: 10px; color: navy; font-size: 28px;">Latest Products</h2>
+                
+                <div class="iframe-container">
+                    <iframe id="contentFrame" name="ff" ></iframe>
+                    <nav class="iframe-v">
+                        <a href="iphone17promax.html" class="iframe-a" target="ff">IPHONE 17 PRO MAX</a>
+                        <a href="galaxys25ultra.html" class="iframe-a" target="ff">GALAXY S25 ULTRA</a>
+                        <a href="playstayion5.html" class="iframe-a" target="ff">PLAYSTATION 5</a>
+                        <a href="applewatch11.html" class="iframe-a" target="ff">APPLE WATCH 11</a>
+                        <a href="legionpro5.html" class="iframe-a" target="ff">LEGION PRO 5</a>
+                    </nav>
+                </div>
+                
+                <div class="brand-pic" style="margin-top: 20px; margin-left: 0; margin-right: 0; width: 100%;">
+                    <div class="brand-pic-a">
+                        <div class="scroll-photo">
+                            <img src="pic.100.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.101.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.102.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.103.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.104.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.105.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.106.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.107.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.108.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.109.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.110.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.111.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.112.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.100.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.101.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.102.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.103.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.104.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.105.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.106.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.107.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.108.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.109.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.110.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.111.svg">
+                        </div>
+                        <div class="scroll-photo">
+                            <img src="pic.112.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <a href="#top" class="back-up">↑</a>
+</body>
+</html>
